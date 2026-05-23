@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>SR.DEV — Paquetes del cliente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4EDE2;
+    --ink:#1A1714;
+    --muted:rgba(26,23,20,0.55);
+    --line:rgba(26,23,20,0.18);
+    --accent:#C24A1F;
+    --serif:'Instrument Serif', serif;
+    --mono:'JetBrains Mono', monospace;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink); font-family:var(--serif); min-height:100vh; }
+  .wrap{ max-width:1440px; margin:0 auto; padding:64px 80px 120px; position:relative; }
+
+  /* Header */
+  .hdr{ display:flex; justify-content:space-between; align-items:baseline; font-family:var(--mono); font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); padding-bottom:18px; border-bottom:1px solid var(--line); }
+  .hdr .right{ display:flex; gap:36px; }
+  .hdr .wm{ color:var(--ink); letter-spacing:0.3em; font-weight:500; }
+
+  /* Hero */
+  .hero{ padding:72px 0 56px; }
+  .eyebrow{ font-family:var(--mono); font-size:14px; letter-spacing:0.3em; text-transform:uppercase; color:var(--accent); margin-bottom:24px; }
+  .hero h1{ margin:0; font-family:var(--serif); font-size:168px; line-height:0.86; letter-spacing:-0.045em; font-weight:400; max-width:1200px; }
+  .hero h1 em{ font-style:italic; color:var(--accent); }
+  .hero p{ margin:32px 0 0; max-width:680px; font-family:var(--serif); font-size:28px; line-height:1.25; color:var(--muted); font-style:italic; letter-spacing:-0.01em; }
+
+  /* Grid */
+  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:48px; }
+  .card{ background:transparent; border:1px solid var(--line); padding:36px 36px 32px; position:relative; min-height:340px; display:flex; flex-direction:column; text-decoration:none; color:inherit; transition:background 200ms ease, transform 200ms ease, border-color 200ms ease; }
+  .card:hover{ background:rgba(0,0,0,0.03); border-color:var(--ink); transform:translate(0, -4px); }
+  .card .idx{ font-family:var(--mono); font-size:48px; font-weight:500; letter-spacing:-0.02em; color:var(--accent); line-height:1; }
+  .card .doc{ position:absolute; top:36px; right:36px; font-family:var(--mono); font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); }
+  .card h2{ margin:42px 0 14px; font-family:var(--serif); font-size:56px; line-height:0.95; letter-spacing:-0.02em; font-weight:400; }
+  .card p{ margin:0 0 24px; font-family:var(--serif); font-size:20px; color:var(--muted); line-height:1.3; max-width:480px; }
+  .card .meta{ margin-top:auto; padding-top:20px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; font-family:var(--mono); font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); }
+  .card .cta{ color:var(--accent); }
+
+  /* Color tags for each doc */
+  .card[data-doc="01"] .swatch{ background:#C24A1F; }
+  .card[data-doc="02"] .swatch{ background:#1F5DBD; }
+  .card[data-doc="03"] .swatch{ background:#D4A24C; }
+  .card[data-doc="04"] .swatch{ background:#76C893; }
+  .swatch{ position:absolute; top:0; left:0; height:6px; width:60px; }
+
+  /* Footer */
+  .ftr{ margin-top:80px; padding-top:24px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; font-family:var(--mono); font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); }
+
+  @media (max-width: 900px){
+    .wrap{ padding:48px 32px 80px; }
+    .hero h1{ font-size:96px; }
+    .grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hdr">
+    <div class="wm">SR.DEV STUDIO</div>
+    <div class="right"><span>Bogotá D.C.</span><span>Mayo · 2025</span></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">Paquetes del cliente · Plasfilm + Docolco</div>
+    <h1>Esto es lo<br/>que hacemos<br/><em>juntos.</em></h1>
+    <p>Bienvenida, avance, contrato y estrategia post-lanzamiento — diseñados como una serie editorial coherente.</p>
+  </div>
+
+  <div class="grid">
+
+    <a class="card" data-doc="01" href="01-bienvenida.html">
+      <div class="swatch"></div>
+      <div class="idx">01</div>
+      <div class="doc">DOC-001 · Onboarding</div>
+      <h2>Paquete de<br/>Bienvenida</h2>
+      <p>Quién es SR.DEV, el alcance del proyecto, comparativa contra agencias y los siguientes pasos.</p>
+      <div class="meta"><span>6 slides · Mayo 2025</span><span class="cta">Abrir →</span></div>
+    </a>
+
+    <a class="card" data-doc="02" href="02-estado.html">
+      <div class="swatch"></div>
+      <div class="idx">02</div>
+      <div class="doc">DOC-002 · Reporte semanal</div>
+      <h2>Estado<br/>del proyecto</h2>
+      <p>Avance Plasfilm 65% · Docolco 40%. Detalle por módulo y las acciones requeridas esta semana.</p>
+      <div class="meta"><span>4 slides · Semana 21</span><span class="cta">Abrir →</span></div>
+    </a>
+
+    <a class="card" data-doc="03" href="03-contrato.html">
+      <div class="swatch"></div>
+      <div class="idx">03</div>
+      <div class="doc">DOC-003 · Documento legal</div>
+      <h2>Contrato<br/>&amp; pagos</h2>
+      <p>Alcance, pagos en dos hitos de $1.000.000 COP, métodos aceptados y protocolo de comunicación.</p>
+      <div class="meta"><span>4 slides · $2.000.000 COP</span><span class="cta">Abrir →</span></div>
+    </a>
+
+    <a class="card" data-doc="04" href="04-estrategia.html">
+      <div class="swatch"></div>
+      <div class="idx">04</div>
+      <div class="doc">DOC-004 · Estrategia + accesos</div>
+      <h2>Estrategia<br/>post-lanzamiento</h2>
+      <p>Plan de 90 días Plasfilm, 60 días Docolco, tabla de credenciales y métricas de éxito.</p>
+      <div class="meta"><span>5 slides · Confidencial</span><span class="cta">Abrir →</span></div>
+    </a>
+
+  </div>
+
+  <div class="ftr">
+    <span>SR.DEV · Samuel David Rojas Monroy</span>
+    <span>+57 304 353 8450 · samueldavidvida@gmail.com</span>
+    <span>Mayo 2025 · v1</span>
+  </div>
+
+</div>
+</body>
+</html>

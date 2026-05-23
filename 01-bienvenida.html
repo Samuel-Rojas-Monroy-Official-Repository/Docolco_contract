@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>SR.DEV · 01 — Paquete de Bienvenida</title>
+<link rel="stylesheet" href="deck-shared.css" />
+<style>
+  body{
+    --bg:#F1E9DA;
+    --ink:#1A1714;
+    --muted:rgba(26,23,20,0.55);
+    --line:rgba(26,23,20,0.18);
+    --grid:rgba(26,23,20,0.05);
+    --accent:#C24A1F;
+  }
+  /* Slide 1 — Cover */
+  .cover .display-title{ font-size:340px; line-height:0.84; }
+  .cover .display-title em{ font-style:italic; color:var(--accent); font-size:80px; letter-spacing:-0.02em; }
+  .cover .client-stack{ position:absolute; right:80px; top:300px; text-align:right; }
+  .cover .client-stack h3{ margin:0; font-family:var(--serif); font-size:72px; line-height:0.9; letter-spacing:-0.02em; font-weight:400; }
+  .cover .client-stack .plus{ font-size:32px; color:var(--muted); margin:10px 0; }
+
+  /* Slide 2 — Quién es SR.DEV */
+  .who .name{ font-size:300px; line-height:0.85; }
+  .who-stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:36px; margin-top:60px; padding-top:36px; border-top:1px solid var(--line); }
+  .who-stats .n{ font-family:var(--serif); font-size:96px; line-height:0.9; letter-spacing:-0.03em; color:var(--accent); }
+  .stack-strip{ position:absolute; left:80px; right:80px; bottom:170px; padding-top:20px; border-top:1px solid var(--line);
+                font-family:var(--mono); font-size:14px; letter-spacing:0.12em; color:var(--muted); }
+  .stack-strip b{ color:var(--ink); font-weight:500; margin-right:8px; letter-spacing:0.2em; }
+
+  /* Slide 3 — El proyecto */
+  .proj-title{ font-size:240px; line-height:0.86; }
+  .proj-cols{ display:grid; grid-template-columns:1fr 1fr; gap:64px; margin-top:48px; }
+  .proj-card{ border-top:2px solid var(--ink); padding-top:24px; }
+  .proj-card h4{ margin:0 0 8px; font-family:var(--mono); font-size:14px; letter-spacing:0.22em; text-transform:uppercase; }
+  .proj-card .country{ font-family:var(--mono); font-size:12px; letter-spacing:0.22em; color:var(--muted); margin-bottom:24px; }
+  .proj-card h5{ margin:0 0 18px; font-family:var(--serif); font-size:48px; letter-spacing:-0.02em; line-height:1; }
+  .proj-card ul{ margin:0; padding:0; list-style:none; }
+  .proj-card li{ display:flex; gap:14px; padding:10px 0; border-bottom:1px solid var(--line); font-family:var(--serif); font-size:22px; }
+  .proj-card li::before{ content:"▸"; color:var(--accent); font-family:var(--mono); font-size:14px; line-height:1.5; }
+
+  /* Slide 4 — Calidad de agencia */
+  .vs-title{ font-size:220px; line-height:0.85; }
+  .vs-table{ margin-top:48px; width:100%; border-collapse:collapse; font-family:var(--serif); }
+  .vs-table th, .vs-table td{ text-align:left; padding:18px 16px; border-bottom:1px solid var(--line); font-size:24px; font-weight:400; }
+  .vs-table thead th{ font-family:var(--mono); font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); border-bottom:2px solid var(--ink); padding-bottom:12px; }
+  .vs-table .sr{ color:var(--accent); font-weight:500; }
+  .vs-table .y{ color:var(--ink); }
+  .vs-table .n{ color:var(--muted); }
+
+  /* Slide 5 — Listos para empezar */
+  .ready .display-title{ font-size:280px; }
+  .ready-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:36px; margin-top:60px; padding-top:30px; border-top:1px solid var(--line); }
+  .ready-grid .k{ font-family:var(--mono); font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); margin-bottom:14px; }
+  .ready-grid .v{ font-family:var(--serif); font-size:36px; line-height:1.05; letter-spacing:-0.01em; }
+  .ready-grid .v small{ display:block; font-family:var(--mono); font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); margin-top:10px; }
+
+  /* Slide 6 — Siguiente paso */
+  .next{ display:flex; flex-direction:column; justify-content:center; align-items:flex-start; }
+  .next .display-title{ font-size:240px; line-height:0.86; }
+  .next .sub{ font-family:var(--serif); font-size:54px; font-style:italic; color:var(--muted); margin-top:28px; letter-spacing:-0.01em; }
+  .next .cta{ font-family:var(--mono); font-size:36px; letter-spacing:0.06em; color:var(--accent); margin-top:64px; padding-top:24px; border-top:2px solid var(--accent); display:inline-block; }
+</style>
+</head>
+<body>
+<deck-stage>
+
+<!-- SLIDE 1 — COVER -->
+<section data-screen-label="01 Cover" class="cover">
+  <div class="hdr">
+    <div class="idx"><b>01</b><span>/ 04</span></div>
+    <div class="right"><span>SR.DEV STUDIO</span><span>MAYO · 2025</span></div>
+  </div>
+
+  <div style="position:absolute; top:300px; left:80px;">
+    <div class="eyebrow" style="margin-bottom:32px;">Paquete de Bienvenida · Vol. I</div>
+    <div class="display display-title">
+      Bien-<br/>
+      <span style="display:flex; align-items:baseline; gap:36px;">venidos<em>—al proyecto.</em></span>
+    </div>
+  </div>
+
+  <div class="client-stack">
+    <div class="label-mono" style="margin-bottom:20px;">Clientes</div>
+    <h3>Plasfilm<br/>S.A.S.</h3>
+    <div class="plus">+</div>
+    <h3>Docolco<br/>LLC</h3>
+  </div>
+
+  <div class="ftr">
+    <div class="cell"><span class="k">Estudio</span><span class="v">SR.DEV · Samuel Rojas</span></div>
+    <div class="cell"><span class="k">Documento</span><span class="v">DOC-001 · Bienvenida</span></div>
+    <div class="cell"><span class="k">Origen</span><span class="v">Bogotá D.C. · Colombia</span></div>
+    <div class="cell"><span class="k">Contacto</span><span class="v">+57 304 353 8450</span></div>
+  </div>
+</section>
+
+<!-- SLIDE 2 — QUIÉN ES SR.DEV -->
+<section data-screen-label="02 Quién es" class="who">
+  <div class="hdr">
+    <div class="idx"><b>02</b><span>/ 06</span></div>
+    <div class="right"><span>QUIÉN ES SR.DEV</span><span>DESARROLLADOR INDEPENDIENTE</span></div>
+  </div>
+
+  <div class="page-body">
+    <div class="eyebrow" style="margin-bottom:28px;">01 — El equipo de uno</div>
+    <div class="display name">Samuel<br/>Rojas<span class="acc" style="font-size:60px;">.</span></div>
+    <div style="font-family:var(--mono); font-size:18px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin-top:24px;">
+      Bogotá · Colombia · Disponible remoto
+    </div>
+
+    <div class="who-stats">
+      <div><div class="n">6+</div><div class="stat-lbl" style="margin-top:10px;">Años de experiencia</div></div>
+      <div><div class="n">4</div><div class="stat-lbl" style="margin-top:10px;">Servicios core</div></div>
+      <div><div class="n">10+</div><div class="stat-lbl" style="margin-top:10px;">Certificaciones</div></div>
+      <div><div class="n">100%</div><div class="stat-lbl" style="margin-top:10px;">Entrega directa</div></div>
+    </div>
+  </div>
+
+  <div class="stack-strip">
+    <b>STACK</b>
+    Python · JS / TS · React · HTML / CSS · PostgreSQL · MongoDB · Supabase · n8n · Ollama · ESP32 · Docker · Linux
+  </div>
+
+  <div class="ftr">
+    <div class="cell"><span class="k">Documento</span><span class="v">DOC-001 · Bienvenida</span></div>
+    <div class="cell"><span class="k">Página</span><span class="v">02 / 06</span></div>
+    <div class="wm">SR.DEV</div>
+  </div>
+</section>
+
+<!-- SLIDE 3 — EL PROYECTO -->
+<section data-screen-label="03 El proyecto">
+  <div class="hdr">
+    <div class="idx"><b>03</b><span>/ 06</span></div>
+    <div class="right"><span>EL PROYECTO</span><span>2 SITIOS · 1 DEV · 1 OBJETIVO</span></div>
+  </div>
+
+  <div class="page-body">
+    <div class="eyebrow" style="margin-bottom:28px;">02 — Alcance del trabajo</div>
+    <div class="display proj-title">Dos sitios.<br/><span class="acc">Un</span> sistema.</div>
+
+    <div class="proj-cols">
+      <div class="proj-card">
+        <h4>Plasfilm S.A.S.</h4>
+        <div class="country">🇨🇴 Colombia · Sitio corporativo</div>
+        <h5>HTML · CSS · JS custom</h5>
+        <ul>
+          <li>5 secciones completas</li>
+          <li>Portafolio de productos químicos</li>
+          <li>Formulario de contacto</li>
+          <li>Modal de productos con fichas</li>
+          <li>SEO básico · Publicación Netlify</li>
+        </ul>
+      </div>
+      <div class="proj-card">
+        <h4>Docolco LLC</h4>
+        <div class="country">🇺🇸 Estados Unidos · E-commerce</div>
+        <h5>Tienda con pagos Stripe</h5>
+        <ul>
+          <li>9 productos · carrito funcional</li>
+          <li>Stripe integrado · Bank of America</li>
+          <li>Páginas legales (Privacy · Terms)</li>
+          <li>Dominio .com + hosting Netlify</li>
+          <li>Mercado latino USA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="ftr">
+    <div class="cell"><span class="k">Documento</span><span class="v">DOC-001 · Bienvenida</span></div>
+    <div class="cell"><span class="k">Página</span><span class="v">03 / 06</span></div>
+    <div class="wm">SR.DEV</div>
+  </div>
+</section>
+
+<!-- SLIDE 4 — POR QUÉ SR.DEV -->
+<section data-screen-label="04 Por qué SR.DEV">
+  <div class="hdr">
+    <div class="idx"><b>04</b><span>/ 06</span></div>
+    <div class="right"><span>POR QUÉ SR.DEV</span><span>COMPARATIVA</span></div>
+  </div>
+
+  <div class="page-body">
+    <div class="eyebrow" style="margin-bottom:28px;">03 — La diferencia</div>
+    <div class="display vs-title">Calidad de agencia.<br/><span class="acc">Sin</span> intermediarios.</div>
+
+    <table class="vs-table">
+      <thead>
+        <tr><th></th><th>Wix / Squarespace</th><th>Agencia Bogotá</th><th class="sr">SR.DEV</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Precio</td><td class="n">$170K+/mes</td><td class="n">$8M – $20M</td><td class="sr">$2M total ✓</td></tr>
+        <tr><td>Código propio</td><td class="n">No</td><td class="y">Sí</td><td class="sr">Sí ✓</td></tr>
+        <tr><td>Animaciones avanzadas</td><td class="n">No</td><td class="n">Costo extra</td><td class="sr">Incluido ✓</td></tr>
+        <tr><td>IA &amp; IoT</td><td class="n">No</td><td class="n">No</td><td class="sr">Incluido ✓</td></tr>
+        <tr><td>Comunicación</td><td class="n">Bot de soporte</td><td class="n">Project manager</td><td class="sr">Directo conmigo ✓</td></tr>
+        <tr><td>Tiempo entrega</td><td class="n">—</td><td class="n">4 – 8 semanas</td><td class="sr">1 – 2 semanas ✓</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ftr">
+    <div class="cell"><span class="k">Documento</span><span class="v">DOC-001 · Bienvenida</span></div>
+    <div class="cell"><span class="k">Página</span><span class="v">04 / 06</span></div>
+    <div class="wm">SR.DEV</div>
+  </div>
+</section>
+
+<!-- SLIDE 5 — LISTOS PARA EMPEZAR -->
+<section data-screen-label="05 Listos" class="ready">
+  <div class="hdr">
+    <div class="idx"><b>05</b><span>/ 06</span></div>
+    <div class="right"><span>CONTACTO DIRECTO</span><span>SIEMPRE DISPONIBLE</span></div>
+  </div>
+
+  <div class="page-body">
+    <div class="eyebrow" style="margin-bottom:28px;">04 — Próximas conversaciones</div>
+    <div class="display display-title">¿Listos<br/>para <span class="acc">empezar?</span></div>
+
+    <div class="ready-grid">
+      <div>
+        <div class="k">WhatsApp</div>
+        <div class="v">+57 304<br/>353 8450<small>Respuesta &lt; 2h</small></div>
+      </div>
+      <div>
+        <div class="k">Email</div>
+        <div class="v">samueldavidvida<br/>@gmail.com<small>Respuesta &lt; 24h</small></div>
+      </div>
+      <div>
+        <div class="k">GitHub</div>
+        <div class="v">Samuel-Rojas<br/>-Monroy<small>Portfolio técnico</small></div>
+      </div>
+      <div>
+        <div class="k">Ubicación</div>
+        <div class="v">Bogotá D.C.<br/>Colombia<small>Disponible remoto</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ftr">
+    <div class="cell"><span class="k">Documento</span><span class="v">DOC-001 · Bienvenida</span></div>
+    <div class="cell"><span class="k">Página</span><span class="v">05 / 06</span></div>
+    <div class="wm">SR.DEV</div>
+  </div>
+</section>
+
+<!-- SLIDE 6 — SIGUIENTE PASO -->
+<section data-screen-label="06 Siguiente paso" class="next">
+  <div class="hdr">
+    <div class="idx"><b>06</b><span>/ 06</span></div>
+    <div class="right"><span>CIERRE</span><span>DOC-001 / END</span></div>
+  </div>
+
+  <div class="page-body" style="display:flex; flex-direction:column; justify-content:center;">
+    <div class="eyebrow" style="margin-bottom:32px;">El siguiente paso</div>
+    <div class="display display-title">Confirmar<br/>anticipo. <span class="acc">Enviar</span><br/>materiales.</div>
+    <div class="cta">+57 304 353 8450</div>
+  </div>
+
+  <div class="ftr">
+    <div class="cell"><span class="k">Estudio</span><span class="v">SR.DEV · Samuel Rojas</span></div>
+    <div class="cell"><span class="k">Desarrollador Web</span><span class="v">Bogotá · 2025</span></div>
+    <div class="wm">SR.DEV</div>
+  </div>
+</section>
+
+</deck-stage>
+<script src="deck-stage.js"></script>
+</body>
+</html>

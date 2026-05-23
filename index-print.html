@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>SR.DEV — Paquetes del cliente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4EDE2;
+    --ink:#1A1714;
+    --muted:rgba(26,23,20,0.55);
+    --line:rgba(26,23,20,0.18);
+    --accent:#C24A1F;
+    --serif:'Instrument Serif', serif;
+    --mono:'JetBrains Mono', monospace;
+  }
+  *{ box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink); font-family:var(--serif); }
+  .wrap{ max-width:1440px; margin:0 auto; padding:48px 64px 64px; position:relative; }
+
+  /* Header */
+  .hdr{ display:flex; justify-content:space-between; align-items:baseline; font-family:var(--mono); font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); padding-bottom:14px; border-bottom:1px solid var(--line); }
+  .hdr .right{ display:flex; gap:28px; }
+  .hdr .wm{ color:var(--ink); letter-spacing:0.3em; font-weight:500; }
+
+  /* Hero */
+  .hero{ padding:42px 0 36px; }
+  .eyebrow{ font-family:var(--mono); font-size:11px; letter-spacing:0.3em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; }
+  .hero h1{ margin:0; font-family:var(--serif); font-size:112px; line-height:0.88; letter-spacing:-0.045em; font-weight:400; }
+  .hero h1 em{ font-style:italic; color:var(--accent); }
+  .hero p{ margin:22px 0 0; max-width:680px; font-family:var(--serif); font-size:22px; line-height:1.25; color:var(--muted); font-style:italic; letter-spacing:-0.01em; }
+
+  /* Grid */
+  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:32px; }
+  .card{ background:transparent; border:1px solid var(--line); padding:26px 26px 22px; position:relative; min-height:240px; display:flex; flex-direction:column; text-decoration:none; color:inherit; break-inside:avoid; }
+  .card .idx{ font-family:var(--mono); font-size:36px; font-weight:500; letter-spacing:-0.02em; color:var(--accent); line-height:1; }
+  .card .doc{ position:absolute; top:26px; right:26px; font-family:var(--mono); font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); }
+  .card h2{ margin:28px 0 10px; font-family:var(--serif); font-size:40px; line-height:0.95; letter-spacing:-0.02em; font-weight:400; }
+  .card p{ margin:0 0 16px; font-family:var(--serif); font-size:16px; color:var(--muted); line-height:1.3; max-width:480px; }
+  .card .meta{ margin-top:auto; padding-top:14px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; font-family:var(--mono); font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); }
+  .card .cta{ color:var(--accent); }
+
+  /* Color tags for each doc */
+  .card[data-doc="01"] .swatch{ background:#C24A1F; }
+  .card[data-doc="02"] .swatch{ background:#1F5DBD; }
+  .card[data-doc="03"] .swatch{ background:#D4A24C; }
+  .card[data-doc="04"] .swatch{ background:#76C893; }
+  .swatch{ position:absolute; top:0; left:0; height:5px; width:50px; }
+
+  /* Footer */
+  .ftr{ margin-top:48px; padding-top:18px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; font-family:var(--mono); font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); }
+
+  /* Print */
+  @page{ size: Letter portrait; margin: 0.4in; }
+  @media print{
+    html,body{ background:var(--bg); }
+    .wrap{ padding:0; max-width:none; }
+    .hero{ padding:24px 0 22px; }
+    .hero h1{ font-size:84px; }
+    .hero p{ font-size:18px; }
+    .grid{ gap:14px; margin-top:18px; }
+    .card{ min-height:200px; padding:20px; }
+    .card h2{ font-size:32px; margin:20px 0 8px; }
+    .card p{ font-size:13px; }
+    .card .idx{ font-size:30px; }
+    .ftr{ margin-top:28px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hdr">
+    <div class="wm">SR.DEV STUDIO</div>
+    <div class="right"><span>Bogotá D.C.</span><span>Mayo · 2025</span></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">Paquetes del cliente · Plasfilm + Docolco</div>
+    <h1>Esto es lo<br/>que hacemos<br/><em>juntos.</em></h1>
+    <p>Bienvenida, avance, contrato y estrategia post-lanzamiento — diseñados como una serie editorial coherente.</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" data-doc="01">
+      <div class="swatch"></div>
+      <div class="idx">01</div>
+      <div class="doc">DOC-001 · Onboarding</div>
+      <h2>Paquete de<br/>Bienvenida</h2>
+      <p>Quién es SR.DEV, el alcance del proyecto, comparativa contra agencias y los siguientes pasos.</p>
+      <div class="meta"><span>6 slides · Mayo 2025</span><span class="cta">Abrir →</span></div>
+    </div>
+
+    <div class="card" data-doc="02">
+      <div class="swatch"></div>
+      <div class="idx">02</div>
+      <div class="doc">DOC-002 · Reporte semanal</div>
+      <h2>Estado<br/>del proyecto</h2>
+      <p>Avance Plasfilm 65% · Docolco 40%. Detalle por módulo y las acciones requeridas esta semana.</p>
+      <div class="meta"><span>4 slides · Semana 21</span><span class="cta">Abrir →</span></div>
+    </div>
+
+    <div class="card" data-doc="03">
+      <div class="swatch"></div>
+      <div class="idx">03</div>
+      <div class="doc">DOC-003 · Documento legal</div>
+      <h2>Contrato<br/>&amp; pagos</h2>
+      <p>Alcance, pagos en dos hitos de $1.000.000 COP, métodos aceptados y protocolo de comunicación.</p>
+      <div class="meta"><span>4 slides · $2.000.000 COP</span><span class="cta">Abrir →</span></div>
+    </div>
+
+    <div class="card" data-doc="04">
+      <div class="swatch"></div>
+      <div class="idx">04</div>
+      <div class="doc">DOC-004 · Estrategia + accesos</div>
+      <h2>Estrategia<br/>post-lanzamiento</h2>
+      <p>Plan de 90 días Plasfilm, 60 días Docolco, tabla de credenciales y métricas de éxito.</p>
+      <div class="meta"><span>5 slides · Confidencial</span><span class="cta">Abrir →</span></div>
+    </div>
+
+  </div>
+
+  <div class="ftr">
+    <span>SR.DEV · Samuel David Rojas Monroy</span>
+    <span>+57 304 353 8450 · samueldavidvida@gmail.com</span>
+    <span>Mayo 2025 · v1</span>
+  </div>
+
+</div>
+<script>
+  (async () => {
+    try { if (document.fonts && document.fonts.ready) await document.fonts.ready; } catch(e){}
+    await new Promise(r => setTimeout(r, 500));
+    window.print();
+  })();
+</script>
+</body>
+</html>
